@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/"
+  to = "/forms"
+
+[[redirects]]
+  from = "/"
+  to = "/dashboard"
+
+[[redirects]]
+  from = "/"
+  to = "/"
+
+[[redirects]]
+  from = "/forms"
+  to = "/dashboard"
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/forms"
