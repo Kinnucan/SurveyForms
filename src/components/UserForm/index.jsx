@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Form, Input, Button } from "antd";
-import useFormsData from "../../hooks/useFormsData";
+import useSubmitForm from "../../hooks/useSubmitForm";
 import "./style.css";
 
 const UserForm = () => {
   const [form] = Form.useForm();
-  const { submit, submitFormResponse } = useFormsData();
+  const { submit, submitFormResponse } = useSubmitForm();
   const { isLoading, isSuccess } = submitFormResponse;
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const UserForm = () => {
 
   const onSubmit = () => {
     submit({
-      formName: "InterestsForm",
+      formName: "UserForm",
       date: new Date(),
       formData: form.getFieldsValue(),
     });

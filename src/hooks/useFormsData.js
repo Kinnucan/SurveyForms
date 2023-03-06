@@ -1,5 +1,5 @@
-import { useMemo, useCallback } from "react";
-import { useSubmitFormMutation, useGetFormsDataQuery } from "../api";
+import { useMemo } from "react";
+import { useGetFormsDataQuery } from "../api";
 
 const useFormsData = (formName) => {
   // Get form data
@@ -26,23 +26,11 @@ const useFormsData = (formName) => {
     return parsedItems;
   }, [data, isSuccess]);
 
-  // Submit form data
-  const [submitForm, submitFormResponse] = useSubmitFormMutation();
-
-  const submit = useCallback(
-    (data) => {
-      submitForm(data);
-    },
-    [submitForm]
-  );
-
   return {
     data: formData,
     isLoading,
     isError,
     isSuccess,
-    submit,
-    submitFormResponse,
   };
 };
 

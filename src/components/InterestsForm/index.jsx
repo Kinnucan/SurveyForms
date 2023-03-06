@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Form, Input, Select, Button } from "antd";
-import useFormsData from "../../hooks/useFormsData";
+import useSubmitForm from "../../hooks/useSubmitForm";
 import "./style.css";
 
 const InterestsForm = () => {
   const [form] = Form.useForm();
-  const { submit, submitFormResponse } = useFormsData();
+  const { submit, submitFormResponse } = useSubmitForm();
   const { isLoading, isSuccess } = submitFormResponse;
 
   useEffect(() => {

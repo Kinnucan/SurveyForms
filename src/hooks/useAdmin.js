@@ -1,9 +1,9 @@
 import { useMemo } from "react";
-import { useGetAdminDataQuery } from "../api";
+import { useGetAdminInfoQuery } from "../api";
 
 const useAdmin = (email) => {
   // Get Admin data
-  const { data, isLoading, isError, isSuccess } = useGetAdminDataQuery(email);
+  const { data, isLoading, isError, isSuccess } = useGetAdminInfoQuery(email);
 
   const isAdmin = useMemo(() => {
     if (!isLoading && data) return data["Items"][0]["Admin"]["BOOL"];

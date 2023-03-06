@@ -7,9 +7,14 @@ const UserTable = () => {
 
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      sorter: alphanumericSorter("name"),
+      title: "First Name",
+      dataIndex: "firstName",
+      sorter: alphanumericSorter("firstName"),
+    },
+    {
+      title: "Last Name",
+      dataIndex: "lastName",
+      sorter: alphanumericSorter("lastName"),
     },
     {
       title: "Preferred Name",

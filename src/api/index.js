@@ -30,7 +30,7 @@ const api = createApi({
     }),
 
     // Get Admin data for a user
-    getAdminData: builder.query({
+    getAdminInfo: builder.query({
       query: (email) => ({
         url: `/admin/${email}`,
         title: "Get Admin Data",
@@ -43,7 +43,7 @@ const api = createApi({
 export const {
   useSubmitFormMutation,
   useGetFormsDataQuery,
-  useGetAdminDataQuery,
+  useGetAdminInfoQuery,
 } = api;
 
 export default api;

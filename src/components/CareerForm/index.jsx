@@ -11,12 +11,12 @@ import {
   Rate,
   Button,
 } from "antd";
-import useFormsData from "../../hooks/useFormsData";
+import useSubmitForm from "../../hooks/useSubmitForm";
 import "./style.css";
 
 const CareerForm = () => {
   const [form] = Form.useForm();
-  const { submit, submitFormResponse } = useFormsData();
+  const { submit, submitFormResponse } = useSubmitForm();
   const { isLoading, isSuccess } = submitFormResponse;
 
   const [yearsOfExp, setyearsOfExp] = useState(0);
@@ -59,7 +59,7 @@ const CareerForm = () => {
     submit({
       formName: "CareerForm",
       date: new Date(),
-      formData: form.getFieldsValue(),
+      formData: formValues,
     });
   };
 

@@ -17,7 +17,7 @@ const tables = {
 
 const DashboardPage = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  const { isAdmin, isLoading: isAdminLoading } = useAdmin(user.email);
+  const { isAdmin, isLoading: isAdminLoading } = useAdmin(user?.email);
 
   return (
     <ContentLayout>

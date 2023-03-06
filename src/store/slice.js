@@ -1,21 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import api from "../api";
 
-export const formsSlice = createSlice({
+const initialState = {
+  isAdmin: false,
+};
+
+const formsSlice = createSlice({
   name: "formsSlice",
-  initialState: {
-    isAdmin: false,
-  },
+  initialState,
   reducers: {
-    setIsAdmin: (state) => {
-      state.isAdmin = true;
+    setIsAdmin: (state, { payload }) => {
+      state.isAdmin = payload["Items"][0]["Admin"]["BOOL"];
     },
   },
   extraReducers: (builder) => {
     builder.addMatcher(
-      api.endpoints.submitForm.matchFulfilled,
+      api.endpoints.getAdminInfo.matchFulfilled,
       (state, { payload }) => {
-        console.log("Payload: ", payload);
+        state.isAdmin = payload["Items"][0]["Admin"]["BOOL"];
       }
     );
   },
