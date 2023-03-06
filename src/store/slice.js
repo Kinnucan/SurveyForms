@@ -3,8 +3,14 @@ import api from "../api";
 
 export const formsSlice = createSlice({
   name: "formsSlice",
-  initialState: {},
-  reducers: {},
+  initialState: {
+    isAdmin: false,
+  },
+  reducers: {
+    setIsAdmin: (state) => {
+      state.isAdmin = true;
+    },
+  },
   extraReducers: (builder) => {
     builder.addMatcher(
       api.endpoints.submitForm.matchFulfilled,
@@ -15,6 +21,6 @@ export const formsSlice = createSlice({
   },
 });
 
-export const {} = formsSlice.actions;
+export const { setIsAdmin } = formsSlice.actions;
 
 export default formsSlice.reducer;
