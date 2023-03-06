@@ -1,0 +1,22 @@
+.header {
+  width: 100vw;
+  position: absolute;
+}
+
+.login-content {
+  padding-top: 90px;
+  height: 100vh;
+}
+
+.login-card {
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.login-button {
+  margin-top: 1%;
+  width: 20%;
+}

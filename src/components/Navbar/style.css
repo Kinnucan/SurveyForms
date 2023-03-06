@@ -1,0 +1,19 @@
+.navbar {
+  width: 100vw;
+  position: absolute;
+}
+
+.navbar-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-menu li {
+  margin-right: 1% !important;
+  margin-left: 1% !important;
+}
+
+.navbar-link p {
+  margin: 0;
+}
