@@ -4,7 +4,6 @@ import useFormsData from "../../hooks/useFormsData";
 
 const CareerTable = () => {
   const { data, isLoading } = useFormsData("CareerForm");
-  console.log(data);
 
   const columns = [
     {
