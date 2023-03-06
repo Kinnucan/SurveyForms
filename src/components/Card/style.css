@@ -21,3 +21,15 @@
 .card--padding-large {
   padding: 1.5rem;
 }
+
+.card-skeleton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 216px; */
+}
+
+.ant-skeleton-element .ant-skeleton-button {
+  display: block;
+  width: auto;
+}

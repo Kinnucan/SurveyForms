@@ -34,7 +34,10 @@ const DashboardPage = () => {
           />
         </Card>
       ) : (
-        <Card className="unauthorized-card">
+        <Card
+          className="unauthorized-card"
+          isLoading={isLoading || isAdminLoading}
+        >
           <h1 className="unauthorized-title">
             You are not authorized to view this page
           </h1>

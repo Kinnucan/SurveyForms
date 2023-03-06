@@ -1,3 +1,5 @@
+import React from "react";
+import CardSkeleton from "./skeleton";
 import "./style.css";
 
 const paddingSizeToClassNameMap = {
@@ -7,13 +9,22 @@ const paddingSizeToClassNameMap = {
   l: "padding-large",
 };
 
-const Card = ({ paddingSize = "m", className = "", children, ...props }) => (
-  <div
-    className={`card ${`card--${paddingSizeToClassNameMap[paddingSize]}`} ${className}`}
-    {...props}
-  >
-    {children}
-  </div>
-);
+const Card = ({
+  isLoading,
+  paddingSize = "m",
+  className = "",
+  children,
+  ...props
+}) =>
+  !isLoading ? (
+    <div
+      className={`card ${`card--${paddingSizeToClassNameMap[paddingSize]}`} ${className}`}
+      {...props}
+    >
+      {children}
+    </div>
+  ) : (
+    <CardSkeleton active={isLoading} />
+  );
 
 export default Card;
