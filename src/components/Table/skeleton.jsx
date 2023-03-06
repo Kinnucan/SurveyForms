@@ -1,5 +1,4 @@
 import { Skeleton } from "antd";
-import "antd/lib/skeleton/style/css";
 import "./style.css";
 
 const TableSkeleton = ({ active = false }) => (
