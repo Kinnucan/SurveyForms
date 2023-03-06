@@ -10,8 +10,7 @@ root.render(
     domain="dev-ubwj2dc66hp08axm.us.auth0.com"
     clientId="7nEiUxXbBsresyr637WYTS28sciyUQgx"
     authorizationParams={{
-      redirect_uri:
-        "https://6405717a1f961b0008f8a558--precious-kangaroo-784609.netlify.app/forms",
+      redirect_uri: "https://precious-kangaroo-784609.netlify.app/forms",
     }}
   >
     <App />
