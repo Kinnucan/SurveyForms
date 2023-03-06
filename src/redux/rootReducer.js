@@ -1,9 +1,12 @@
-import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "./rootReducer";
+import { combineReducers } from "@reduxjs/toolkit";
 import api from "../api";
+import { formsSlice } from "../store/slice";
 
-export default configureStore({
-  reducer: rootReducer(),
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(api.middleware),
-});
+const rootReducer = () =>
+  combineReducers({
+    // Feature Persistence
+    [api.reducerPath]: api.reducer,
+    formsSlice,
+  });
+
+export default rootReducer;
