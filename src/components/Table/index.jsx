@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import { Table as AntTable } from "antd";
 import TableSkeleton from "./skeleton";
-import "antd/lib/table/style/css";
 import "./style.css";
 
 export const alphanumericSorter = (dataIndex) => (a, b) => {
