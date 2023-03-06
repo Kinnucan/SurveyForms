@@ -3,7 +3,7 @@ import Table, { alphanumericSorter } from "../Table";
 import useFormsData from "../../hooks/useFormsData";
 
 const InterestsTable = () => {
-  const { data, isLoading, isError, isSuccess } = useFormsData("InterestsForm");
+  const { data, isLoading } = useFormsData("InterestsForm");
 
   const columns = [
     {

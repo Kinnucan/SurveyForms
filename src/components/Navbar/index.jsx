@@ -26,14 +26,14 @@ const MenuItems = (logout) => [
   },
   {
     label: (
-      <a
+      <Link
         className="navbar-link"
         onClick={() =>
           logout({ logoutParams: { returnTo: window.location.origin } })
         }
       >
         Logout
-      </a>
+      </Link>
     ),
     key: "LOGOUT",
   },

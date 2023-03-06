@@ -6,13 +6,13 @@ import "./style.css";
 const InterestsForm = () => {
   const [form] = Form.useForm();
   const { submit, submitFormResponse } = useFormsData();
-  const { isLoading, isError, isSuccess } = submitFormResponse;
+  const { isLoading, isSuccess } = submitFormResponse;
 
   useEffect(() => {
     if (isSuccess) {
       form.resetFields();
     }
-  }, [isSuccess]);
+  }, [isSuccess, form]);
 
   const generateNumbers = (range) => {
     const numbers = [];

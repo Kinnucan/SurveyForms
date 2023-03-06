@@ -17,7 +17,7 @@ import "./style.css";
 const CareerForm = () => {
   const [form] = Form.useForm();
   const { submit, submitFormResponse } = useFormsData();
-  const { isLoading, isError, isSuccess } = submitFormResponse;
+  const { isLoading, isSuccess } = submitFormResponse;
 
   const [yearsOfExp, setyearsOfExp] = useState(0);
   const onChange = (newValue) => {
@@ -28,7 +28,7 @@ const CareerForm = () => {
     if (isSuccess) {
       form.resetFields();
     }
-  }, [isSuccess]);
+  }, [isSuccess, form]);
 
   const generateSalaries = (range) => {
     const salaries = [];

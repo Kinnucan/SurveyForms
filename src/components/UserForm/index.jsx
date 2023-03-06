@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
-import { Form, Input, Select, Button } from "antd";
+import { Form, Input, Button } from "antd";
 import useFormsData from "../../hooks/useFormsData";
 import "./style.css";
 
 const UserForm = () => {
   const [form] = Form.useForm();
   const { submit, submitFormResponse } = useFormsData();
-  const { isLoading, isError, isSuccess } = submitFormResponse;
+  const { isLoading, isSuccess } = submitFormResponse;
 
   useEffect(() => {
     if (isSuccess) {
       form.resetFields();
     }
-  }, [isSuccess]);
+  }, [isSuccess, form]);
 
   const onSubmit = () => {
     submit({
