@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import api from "../api";
-import openNotification from "../components/notification";
 
 export const formsSlice = createSlice({
   name: "formsSlice",
@@ -11,7 +10,6 @@ export const formsSlice = createSlice({
       api.endpoints.submitForm.matchFulfilled,
       (state, { payload }) => {
         console.log("Payload: ", payload);
-        // openNotification("success", "Form submitted successfully!");
       }
     );
   },
